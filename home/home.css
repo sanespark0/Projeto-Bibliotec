@@ -177,39 +177,54 @@ a {
     padding: 80px 120px;
 }
 
-.livros-grid {
+/* AJUSTE DA SEÇÃO DE LIVROS */
+
+.livros {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    width: 100%;
+    margin-top: 30px;
 }
 
-.livro-card {
+.livro {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.livro-card img {
+.livro img {
     width: 100%;
-    max-width: 200px;
-    height: 280px;
+    max-width: 180px; /* Controla o tamanho máximo da capa */
+    height: 260px;    /* Mantém todas as capas do mesmo tamanho */
     object-fit: cover;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 15px;
-    border-radius: 4px;
 }
 
-.livro-card h4 {
-    font-size: 0.9em;
+.livro h3 {
+    font-size: 0.95em;
     color: var(--azul-escuro);
-    margin-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    min-height: 2.4em; /* Mantém os textos alinhados mesmo com títulos de 2 linhas */
 }
 
-.livro-card p {
-    font-size: 0.8em;
-    color: #666;
+.livro-texto {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 0.85em;
+    color: #555;
 }
+
+.livro-texto h4 {
+    font-weight: 600;
+    color: var(--texto);
+}
+
 
 /* RODAPÉ */
 .rodape {

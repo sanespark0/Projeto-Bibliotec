@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --azul-escuro: #26333D;
+    /* Cores Principais */
+    --azul-escuro: #1A2332;
     --texto: #26333D;
     --branco: #FFFFFF;
     --cor-destaque: #2FD6CB;
+    
+    /* Degradês do Layout (Banner Principal e Meio) */
+    --gradient-banner: linear-gradient(135deg, #4A7FD3 0%, #3B82F6 100%);
+    --gradient-card: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
 }
 
 html {
@@ -21,4 +23,20 @@ html {
 body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--branco);
+    color: var(--texto);
+    /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden;
+}
+
+/* Imagens responsivas por padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
 }
