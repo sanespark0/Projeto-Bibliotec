@@ -4,18 +4,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 120px;
+    padding: 0 5%;
     height: 10vh;
+}
+
+.cabecalho img {
+    height: 35px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 20px;
 }
 
 .navegacao a {
     color: var(--branco);
-    text-transform: uppercase;
+    text-decoration: none;
     font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 /* CONTAINER PRINCIPAL DE LOGIN */
-.login-container {
+.conteudo {
     height: 90vh;
     background-image: url("../Imgs/banner-principal-home.png");
     background-size: cover;
@@ -25,113 +36,136 @@
     align-items: center;
 }
 
-/* CARD CENTRALIZADO */
-.login-card {
+/* CARD DE LOGIN */
+.login {
     background-color: #EBF0F2;
-    width: 100%;
-    max-width: 450px;
-    padding: 40px 35px;
-    border-radius: 25px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.logo-card {
-    width: 50px;
-    margin: 0 auto 15px auto;
+.login-cabecalho img {
+    width: 48px;
+    margin-bottom: 12px;
 }
 
-.login-card h2 {
-    color: #111827;
-    font-size: 1.4em;
+.login-cabecalho h1 {
+    color: var(--azul-escuro);
+    font-size: 1.35em;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
-.login-card p {
+.login-cabecalho p {
     color: #6B7280;
-    font-size: 0.9em;
-    margin-bottom: 30px;
+    font-size: 0.85em;
+    margin-bottom: 25px;
 }
 
-/* FORMULÁRIO */
-.login-form {
+/* FORMULÁRIO E CAMPOS */
+form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     text-align: left;
 }
 
-.input-group label {
-    display: block;
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
     font-size: 0.85em;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 6px;
 }
 
-.input-group input {
+.campo input {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid transparent;
+    padding: 12px 14px;
+    border: 1px solid #D1D5DB;
     border-radius: 8px;
     background-color: var(--branco);
     font-size: 0.9em;
     outline: none;
+    box-sizing: border-box;
 }
 
+.campo input:focus {
+    border-color: var(--azul-escuro);
+}
+
+/* CAIXA DE SENHA E ÍCONE DO OLHO */
 .senha-box {
     position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
+}
+
+.senha-box input {
+    padding-right: 40px;
 }
 
 .eye-icon {
     position: absolute;
     right: 12px;
     cursor: pointer;
-    opacity: 0.5;
+    user-select: none;
+    font-size: 0.9em;
+    opacity: 0.7;
 }
 
 /* BOTÕES */
 .botao-entrar {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     background-color: var(--azul-escuro);
     color: var(--branco);
     border: none;
     border-radius: 8px;
+    font-size: 0.9em;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 10px;
-    transition: 0.2s;
+    margin-top: 8px;
+    transition: opacity 0.2s;
 }
 
 .botao-entrar:hover {
-    opacity: 0.9;
+    opacity: 0.92;
 }
 
-.btn-google {
+.botao-google {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: var(--branco);
     color: #374151;
     border: 1px solid #D1D5DB;
     border-radius: 8px;
+    font-size: 0.85em;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: background-color 0.2s;
 }
 
-.btn-google img {
+.botao-google img {
     width: 18px;
     height: 18px;
 }
 
-.btn-google:hover {
+.botao-google:hover {
     background-color: #F9FAFB;
+}
+.botao-google img {
+    width: 30px;
+    height: 30px;
 }

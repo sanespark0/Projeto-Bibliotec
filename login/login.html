@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliotec - Login</title>
-    <!-- Importa o CSS global primeiro e depois o login.css -->
+    
+    <!-- Importação das folhas de estilo -->
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="login.css">
+    
+    <!-- Ícone da aba -->
     <link rel="shortcut icon" href="../Imgs/Icone - Bibliotec.png" type="image/x-icon">
+    
+    <!-- Carregamento seguro do Script JS -->
+    <script src="../js/login.js" defer></script>
 </head>
-<body>
 
+<body>
     <header class="cabecalho">
         <a href="../Home/home.html">
-            <img src="../Imgs/Logo Horizontal - branca.svg" alt="Logo Bibliotec">
+            <img src="../Imgs/Logo Horizontal - branca.svg" alt="Logo do sistema Bibliotec.">
         </a>
+
         <nav class="navegacao">
-            <a href="../Home/home.html">Home</a>
+            <a href="../Home/home.html#quem-somos">Quem somos</a>
+            <a href="../Home/home.html#acervo">Nosso acervo</a>
+            <a href="../Home/home.html#acesso">Login</a>
         </nav>
     </header>
 
-    <main class="login-container">
-        <div class="login-card">
-            <img src="../Imgs/Icone - Bibliotec.png" alt="Ícone Bibliotec" class="logo-card">
-            
-            <h2>Bem-vindo(a) à Bibliotec</h2>
-            <p>Acesse sua conta para continuar</p>
+    <main class="conteudo">
+        <section class="login">
+            <div class="login-cabecalho">
+                <img src="../Imgs/Icone - Bibliotec.png" alt="Logo Bibliotec">
+                <h1>Bem vindo(a) à Bibliotec</h1>
+                <p>Acesse sua conta para continuar</p>
+            </div>
 
-            <form class="login-form">
-                <div class="input-group">
+            <form>
+                <div class="campo">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" placeholder="email@alunosenai.com" required>
                 </div>
 
-                <div class="input-group">
+                <div class="campo">
                     <label for="senha">Senha</label>
                     <div class="senha-box">
                         <input type="password" id="senha" placeholder="********" required>
-                        <span class="eye-icon">👁️</span>
+                        <span id="mostrar-senha" class="eye-icon">👁️</span>
                     </div>
                 </div>
 
-                <button type="submit" class="btn-entrar">ENTRAR</button>
-                
-                <button type="button" class="btn-google">
-                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
-                    Continuar com Google
+                <button type="submit" class="botao-entrar">Entrar</button>
+
+                <button type="button" class="botao-google">
+                    <img src="../Imgs/icone-google.svg" alt="Logo Google">
+                    <span>Continuar com Google</span>
                 </button>
             </form>
-        </div>
+        </section>
     </main>
-    <script src="login.js"></script>
 </body>
+
 </html>
