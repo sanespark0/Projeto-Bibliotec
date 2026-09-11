@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livro</title>
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="pagina-listagem">
+
+    <aside class="menu-lateral">
+        <div class="topo-menu">
+            <button class="botao-voltar"><i class="fa-solid fa-chevron-left"></i></button>
+            <img class="logo" src="../../imgs/Logo Vertical - clara.svg" alt="Biblio Tec">
+        </div>
+
+        <nav class="menu-navegacao">
+            <a href="#" class="item-menu"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+            <a href="#" class="item-menu"><i class="fa-solid fa-user-plus"></i><span>Cadastrar Usuário</span></a>
+            <a href="#" class="item-menu"><i class="fa-solid fa-user-group"></i><span>Listar Usuários</span></a>
+            <a href="#" class="item-menu ativo"><i class="fa-solid fa-book-medical"></i><span>Cadastrar Livro</span></a>
+            <a href="#" class="item-menu"><i class="fa-solid fa-book-bookmark"></i><span>Listar Livros</span></a>
+            <a href="#" class="item-menu"><i class="fa-solid fa-address-book"></i><span>Livros Reservados</span></a>
+        </nav>
+
+        <a href="../../login/login.html" class="botao-sair"><i
+                class="fa-solid fa-right-from-bracket"></i><span>Sair</span></a>
+    </aside>
+
+    <main class="conteudo-listagem">
+        <section class="cabecalho-pagina">
+            <h1>Cadastrar livro</h1>
+            <p>Preencha as informações para cadastrar um novo livro</p>
+        </section>
+
+        <section class="card-listagem">
+            <form class="formulario-cadastro">
+                <div class="linha-form">
+                    <div class="grupo-campo">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Ex.: Dom Casmurro">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Foto da capa</label>
+                        <div class="campo-file">
+                            <label for="upload-capa" class="btn-file">Escolher arquivo</label>
+                            <span>Nenhum arquivo escolhido</span>
+                            <input type="file" id="upload-capa" hidden>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="linha-form">
+                    <div class="grupo-campo">
+                        <label>Escritor(a)</label>
+                        <input type="text" placeholder="Ex.: Machado de Assis">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Idioma</label>
+                        <input type="text" placeholder="Ex.: Português">
+                    </div>
+                </div>
+
+                <div class="linha-form">
+                    <div class="grupo-campo">
+                        <label>Editora</label>
+                        <input type="text" placeholder="Ex.: Companhia das Letras">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Categorias</label>
+                        <div class="select-wrapper">
+                            <select>
+                                <option value="" disabled selected>Selecione uma categoria</option>
+                                <option value="ti">TI</option>
+                                <option value="literatura">Literatura</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grupo-campo largura-total">
+                    <label>Descrição</label>
+                    <textarea placeholder="Escreva uma breve descrição do livro."></textarea>
+                </div>
+
+                <div class="area-botao-salvar">
+                    <button type="submit" class="btn-salvar">SALVAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

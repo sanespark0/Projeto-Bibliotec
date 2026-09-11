@@ -1,16 +1,22 @@
-/* ESTRUTURA GERAL DA PÁGINA COM SIDEBAR */
-.pagina-listagem {
-    display: flex;
-    min-height: 100vh;
-    background-color: var(--fundo-tela, #F3F4F6);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
-/* MENU LATERAL */
+body.pagina-listagem {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F4F6F9;
+}
+
+/* SIDEBAR */
 .menu-lateral {
-    width: 260px;
-    background-color: var(--azul-escuro, #1E293B);
-    padding: 25px 20px;
+    width: 280px;
+    background-color: #1E2530;
+    padding: 30px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,241 +26,257 @@
 .topo-menu {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .botao-voltar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #3A4454;
     background: transparent;
-    border: none;
-    color: #FFFFFF;
-    font-size: 18px;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
 .topo-menu .logo {
-    max-width: 140px;
+    height: 38px;
 }
 
 .menu-navegacao {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .item-menu {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 15px;
+    gap: 14px;
+    padding: 12px 16px;
     color: #94A3B8;
     text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     border-radius: 8px;
-    font-size: 0.95em;
-    transition: 0.2s;
-}
-
-.item-menu:hover,
-.item-menu.ativo {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
+    transition: all 0.2s ease;
 }
 
 .item-menu i {
-    width: 20px;
+    font-size: 18px;
+    width: 22px;
     text-align: center;
+}
+
+.item-menu.ativo {
+    color: #FFFFFF;
+    position: relative;
+}
+
+.item-menu.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background-color: #00C8B3;
+    border-radius: 2px;
 }
 
 .botao-sair {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 15px;
-    color: #EF4444;
+    gap: 14px;
+    padding: 12px 16px;
+    color: #FFFFFF;
     text-decoration: none;
-    font-weight: 600;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     margin-top: auto;
 }
 
-/* ÁREA CONTEÚDO PRINCIPAL */
+/* ÁREA DE CONTEÚDO PRINCIPAL */
 .conteudo-listagem {
     flex: 1;
-    padding: 40px;
-    overflow-y: auto;
+    padding: 50px 60px;
 }
 
 .cabecalho-pagina {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .cabecalho-pagina h1 {
-    font-size: 1.8em;
-    color: var(--texto-titulo, #0F172A);
-    margin-bottom: 5px;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #1E2530;
+    margin-bottom: 6px;
 }
 
 .cabecalho-pagina p {
-    color: var(--textos-paginas, #64748B);
+    color: #718096;
     font-size: 0.95em;
 }
 
-/* CARD PRINCIPAL DA TABELA */
+/* CARD DA LISTAGEM */
 .card-listagem {
-    background-color: var(--branco, #FFFFFF);
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--cor-bordas, #E2E8F0);
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
-/* AREA DE BUSCA */
+/* ÁREA DE BUSCA E FILTROS */
 .area-busca {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 16px;
+    margin-bottom: 35px;
 }
 
 .campo-busca {
     flex: 1;
-    height: 50px;
-    padding: 0 20px;
-    border: 1px solid var(--cor-bordas, #CBD5E1);
-    border-radius: 10px;
-    background-color: var(--branco, #FFFFFF);
+    height: 48px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0 18px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    background-color: #FFFFFF;
 }
 
 .campo-busca i {
-    font-size: 18px;
-    color: var(--azul-escuro, #1E293B);
+    color: #1E2530;
+    font-size: 16px;
 }
 
 .campo-busca input {
-    flex: 1;
+    width: 100%;
     border: none;
     outline: none;
-    font-family: inherit;
-    font-size: 1em;
-    color: var(--textos-paginas, #334155);
+    font-size: 0.95em;
+    color: #4A5568;
 }
 
-/* BOTÃO FILTRO */
+.campo-busca input::placeholder {
+    color: #A0AEC0;
+}
+
 .botao-filtro {
-    height: 50px;
-    padding: 0 25px;
-    border: 1px solid var(--cor-bordas, #CBD5E1);
-    border-radius: 10px;
-    background-color: var(--branco, #FFFFFF);
+    height: 48px;
+    padding: 0 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--textos-paginas, #334155);
-    font-size: 0.95em;
+    font-size: 0.9em;
     font-weight: 600;
+    color: #1E2530;
     cursor: pointer;
-    transition: 0.2s;
 }
 
-.botao-filtro:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* TABELA - CABEÇALHO */
+/* CABEÇALHO DA TABELA */
 .cabecalho-lista {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    padding: 0 20px 15px; 
-    font-weight: 700;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
+    padding: 0 24px 18px;
 }
 
 .cabecalho-lista h2 {
-    text-align: center;
     font-size: 0.95em;
-    color: var(--textos-paginas, #475569);
+    font-weight: 700;
+    color: #1E2530;
+    text-align: center;
 }
 
-.cabecalho-lista h2:nth-child(1) {
+.cabecalho-lista h2:first-child {
     text-align: left;
 }
 
-/* LISTA DE LIVROS */
+/* LISTA DE LINHAS */
 .lista-livros {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .livro {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    height: 60px;
-    padding: 0 20px;
-    border: 1px solid var(--cor-bordas, #E2E8F0);
-    border-radius: 10px;
+    height: 64px;
+    padding: 0 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
     background-color: #FFFFFF;
-    font-size: 0.95em;
 }
 
-.livro p:nth-child(1) {
+.livro .nome-livro {
     justify-self: flex-start;
+    font-size: 0.95em;
     font-weight: 600;
-    color: var(--texto-titulo, #1E293B);
+    color: #2D3748;
 }
 
-/* CHECKBOX */
+.livro .categoria-livro {
+    font-size: 0.9em;
+    color: #4A5568;
+}
+
+/* CHECKBOX NOVO FORMATO */
 input[type="checkbox"] {
-    height: 24px;
-    width: 24px;
-    border: 1px solid var(--cor-bordas, #94A3B8);
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #CBD5E0;
     border-radius: 6px;
     appearance: none;
-    -webkit-appearance: none;
     cursor: pointer;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    outline: none;
+    background-color: #FFFFFF;
 }
 
 input[type="checkbox"]:checked {
-    background-color: var(--azul-escuro, #2563EB);
-    border-color: var(--azul-escuro, #2563EB);
+    background-color: #1E2530;
+    border-color: #1E2530;
 }
 
 input[type="checkbox"]:checked::after {
     content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 }
 
-/* BOTÕES DE AÇÃO */
+/* BOTÕES DE AÇÃO (ÍCONES) */
 .botao-acao {
+    background: transparent;
     border: none;
-    background-color: transparent;
-    color: var(--textos-paginas, #64748B);
+    color: #2D3748;
     font-size: 18px;
-    transition: 0.2s;
-}
-
-.botao-acao:hover {
-    color: var(--azul-escuro, #2563EB);
-    transform: translateY(-1px);
     cursor: pointer;
 }
 
-/* RODAPÉ DA LISTAGEM */
+/* RODAPÉ E PAGINAÇÃO */
 .rodape-listagem {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid var(--cor-bordas, #E2E8F0);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #EDF2F7;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -262,34 +284,33 @@ input[type="checkbox"]:checked::after {
 
 .quantidade-livros {
     font-size: 0.85em;
-    color: var(--textos-paginas, #64748B);
-    font-weight: 600;
+    font-weight: 700;
+    color: #4A5568;
 }
 
-/* PAGINAÇÃO */
 .paginacao {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
 }
 
 .botao-pagina {
     border: none;
-    background-color: transparent;
-    color: var(--textos-paginas, #64748B);
+    background: transparent;
+    color: #2D3748;
     font-size: 14px;
     cursor: pointer;
 }
 
 .pagina-atual {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #1E2530;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    background-color: var(--azul-escuro, #1E293B);
-    color: #FFFFFF;
     font-size: 0.85em;
     font-weight: 700;
 }
